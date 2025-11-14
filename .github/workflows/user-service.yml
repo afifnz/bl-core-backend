@@ -53,5 +53,5 @@ jobs:
           docker load -i /tmp/user-service.tar
           docker stop user-service || true
           docker rm user-service || true
-          docker run -d --name user-service --restart=unless-stopped --expose 8085 --network logistik_nginx_proxy_manager_default user-service:latest  # Ganti port sesuai kebutuhan
+          docker run -d --name user-service --restart=unless-stopped --expose 8002 --network logistik_nginx_proxy_manager_default user-service:latest  # Ganti port sesuai kebutuhan
           EOF

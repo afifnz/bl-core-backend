@@ -6,13 +6,13 @@ import (
 	"sync"
 
 	// @candi:usecaseImport
-	checkoutusecase "payment-service/internal/modules/checkout/usecase"
-	paymentusecase "payment-service/internal/modules/payment/usecase"
-	bankusecase "payment-service/internal/modules/bank/usecase"
-	categoryusecase "payment-service/internal/modules/category/usecase"
-	methodusecase "payment-service/internal/modules/method/usecase"
-	providerusecase "payment-service/internal/modules/provider/usecase"
-	"payment-service/pkg/shared/usecase/common"
+	bankusecase "monorepo/services/payment-service/internal/modules/bank/usecase"
+	categoryusecase "monorepo/services/payment-service/internal/modules/category/usecase"
+	checkoutusecase "monorepo/services/payment-service/internal/modules/checkout/usecase"
+	methodusecase "monorepo/services/payment-service/internal/modules/method/usecase"
+	paymentusecase "monorepo/services/payment-service/internal/modules/payment/usecase"
+	providerusecase "monorepo/services/payment-service/internal/modules/provider/usecase"
+	"monorepo/services/payment-service/pkg/shared/usecase/common"
 
 	"github.com/golangid/candi/codebase/factory/dependency"
 )

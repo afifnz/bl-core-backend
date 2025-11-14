@@ -11,7 +11,7 @@ import (
 	"github.com/golangid/candi/codebase/app"
 	"github.com/golangid/candi/config"
 
-	service "payment-service/internal"
+	service "monorepo/services/payment-service/internal"
 )
 
 func main() {

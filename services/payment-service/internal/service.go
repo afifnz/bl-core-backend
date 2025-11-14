@@ -3,14 +3,14 @@
 package paymentservice
 
 import (
-	"payment-service/internal/modules/checkout"
-	"payment-service/internal/modules/payment"
-	"payment-service/internal/modules/bank"
-	"payment-service/internal/modules/category"
-	"payment-service/internal/modules/method"
-	"payment-service/internal/modules/provider"
+	"monorepo/services/payment-service/internal/modules/bank"
+	"monorepo/services/payment-service/internal/modules/category"
+	"monorepo/services/payment-service/internal/modules/checkout"
+	"monorepo/services/payment-service/internal/modules/method"
+	"monorepo/services/payment-service/internal/modules/payment"
+	"monorepo/services/payment-service/internal/modules/provider"
 
-	"payment-service/configs"
+	"monorepo/services/payment-service/configs"
 
 	"github.com/golangid/candi/codebase/factory"
 	"github.com/golangid/candi/codebase/factory/dependency"

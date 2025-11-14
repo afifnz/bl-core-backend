@@ -5,9 +5,9 @@ package usecase
 import (
 	"context"
 
-	"payment-service/internal/modules/bank/domain"
-	"payment-service/pkg/shared/repository"
-	"payment-service/pkg/shared/usecase/common"
+	"monorepo/services/payment-service/internal/modules/bank/domain"
+	"monorepo/services/payment-service/pkg/shared/repository"
+	"monorepo/services/payment-service/pkg/shared/usecase/common"
 
 	"github.com/golangid/candi/codebase/factory/dependency"
 )
@@ -16,7 +16,7 @@ import (
 type BankUsecase interface {
 	GetAllBank(ctx context.Context, filter *domain.FilterBank) (data domain.ResponseBankList, err error)
 	GetDetailBank(ctx context.Context, id int) (data domain.ResponseBank, err error)
-	CreateBank(ctx context.Context, data *domain.RequestBank) (res domain.ResponseBank, err error) 
+	CreateBank(ctx context.Context, data *domain.RequestBank) (res domain.ResponseBank, err error)
 	UpdateBank(ctx context.Context, data *domain.RequestBank) (err error)
 	DeleteBank(ctx context.Context, id int) (err error)
 }
@@ -32,9 +32,9 @@ type bankUsecaseImpl struct {
 func NewBankUsecase(deps dependency.Dependency) (BankUsecase, func(sharedUsecase common.Usecase)) {
 	uc := &bankUsecaseImpl{
 		deps:    deps,
-		repoSQL:   repository.GetSharedRepoSQL(),
+		repoSQL: repository.GetSharedRepoSQL(),
 		// repoMongo: repository.GetSharedRepoMongo(),
-		
+
 	}
 	return uc, func(sharedUsecase common.Usecase) {
 		uc.sharedUsecase = sharedUsecase

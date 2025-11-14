@@ -4,7 +4,7 @@ package repository
 
 import (
 	"context"
-	shareddomain "payment-service/pkg/shared/domain"
+	shareddomain "monorepo/services/payment-service/pkg/shared/domain"
 )
 
 // PaymentRepository abstract interface

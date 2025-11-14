@@ -5,9 +5,9 @@ package usecase
 import (
 	"context"
 
-	"payment-service/internal/modules/provider/domain"
-	"payment-service/pkg/shared/repository"
-	"payment-service/pkg/shared/usecase/common"
+	"monorepo/services/payment-service/internal/modules/provider/domain"
+	"monorepo/services/payment-service/pkg/shared/repository"
+	"monorepo/services/payment-service/pkg/shared/usecase/common"
 
 	"github.com/golangid/candi/codebase/factory/dependency"
 )
@@ -16,7 +16,7 @@ import (
 type ProviderUsecase interface {
 	GetAllProvider(ctx context.Context, filter *domain.FilterProvider) (data domain.ResponseProviderList, err error)
 	GetDetailProvider(ctx context.Context, id int) (data domain.ResponseProvider, err error)
-	CreateProvider(ctx context.Context, data *domain.RequestProvider) (res domain.ResponseProvider, err error) 
+	CreateProvider(ctx context.Context, data *domain.RequestProvider) (res domain.ResponseProvider, err error)
 	UpdateProvider(ctx context.Context, data *domain.RequestProvider) (err error)
 	DeleteProvider(ctx context.Context, id int) (err error)
 }
@@ -32,9 +32,9 @@ type providerUsecaseImpl struct {
 func NewProviderUsecase(deps dependency.Dependency) (ProviderUsecase, func(sharedUsecase common.Usecase)) {
 	uc := &providerUsecaseImpl{
 		deps:    deps,
-		repoSQL:   repository.GetSharedRepoSQL(),
+		repoSQL: repository.GetSharedRepoSQL(),
 		// repoMongo: repository.GetSharedRepoMongo(),
-		
+
 	}
 	return uc, func(sharedUsecase common.Usecase) {
 		uc.sharedUsecase = sharedUsecase

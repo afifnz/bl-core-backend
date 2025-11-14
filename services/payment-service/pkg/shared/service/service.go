@@ -1,9 +1,9 @@
 package service
 
 import (
-	"payment-service/pkg/shared"
-	mid_trans "payment-service/pkg/shared/service/midtrans"
-	"payment-service/pkg/shared/service/notifier"
+	"monorepo/services/payment-service/pkg/shared"
+	mid_trans "monorepo/services/payment-service/pkg/shared/service/midtrans"
+	"monorepo/services/payment-service/pkg/shared/service/notifier"
 )
 
 const KeyExternalService string = "midtrans-external-service"

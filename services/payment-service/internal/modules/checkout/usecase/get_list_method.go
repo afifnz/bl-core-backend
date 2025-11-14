@@ -3,7 +3,7 @@ package usecase
 import (
 	"context"
 
-	"payment-service/internal/modules/checkout/domain"
+	"monorepo/services/payment-service/internal/modules/checkout/domain"
 
 	"github.com/golangid/candi/candishared"
 	"github.com/golangid/candi/tracer"

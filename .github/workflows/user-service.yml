@@ -37,11 +37,9 @@ jobs:
           echo "${{ steps.load_env.outputs.ENV_CONTENT }}" > ./services/user-service/.env
           echo "✅ .env file created locally:"
           cat ./services/user-service/.env
-          TESS="$(cat ./services/user-service/.env)"
-          echo "TESS=$TESS"
           IMAGE_NAME=user-service:latest
           echo "🛠️ Building $IMAGE_NAME"
-          docker build -t $IMAGE_NAME ./services/user-service
+          docker build -t $IMAGE_NAME --build-arg SERVICE_NAME=user-service .
           docker save -o ./images/user-service.tar $IMAGE_NAME
   
       - name: Copy Images to VPS

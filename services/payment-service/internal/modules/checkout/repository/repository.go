@@ -5,8 +5,8 @@ package repository
 import (
 	"context"
 
-	"payment-service/internal/modules/checkout/domain"
-	shareddomain "payment-service/pkg/shared/domain"
+	"monorepo/services/payment-service/internal/modules/checkout/domain"
+	shareddomain "monorepo/services/payment-service/pkg/shared/domain"
 
 	"github.com/golangid/candi/candishared"
 )

@@ -8,8 +8,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"payment-service/internal/modules/method/domain"
-	"payment-service/pkg/shared/usecase"
+	"monorepo/services/payment-service/internal/modules/method/domain"
+	"monorepo/services/payment-service/pkg/shared/usecase"
 
 	"github.com/golangid/candi/candihelper"
 	restserver "github.com/golangid/candi/codebase/app/rest_server"

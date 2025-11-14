@@ -2,8 +2,8 @@ package usecase
 
 import (
 	"context"
-	
-	"payment-service/internal/modules/bank/domain"
+
+	"monorepo/services/payment-service/internal/modules/bank/domain"
 
 	"github.com/golangid/candi/tracer"
 )

@@ -4,11 +4,11 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"payment-service/internal/modules/payment/domain"
+	"monorepo/services/payment-service/internal/modules/payment/domain"
 	"strconv"
 	"time"
 
-	shareddomain "payment-service/pkg/shared/domain"
+	shareddomain "monorepo/services/payment-service/pkg/shared/domain"
 
 	"github.com/golangid/candi/tracer"
 	"github.com/midtrans/midtrans-go"

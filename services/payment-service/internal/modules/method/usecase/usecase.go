@@ -5,9 +5,9 @@ package usecase
 import (
 	"context"
 
-	"payment-service/internal/modules/method/domain"
-	"payment-service/pkg/shared/repository"
-	"payment-service/pkg/shared/usecase/common"
+	"monorepo/services/payment-service/internal/modules/method/domain"
+	"monorepo/services/payment-service/pkg/shared/repository"
+	"monorepo/services/payment-service/pkg/shared/usecase/common"
 
 	"github.com/golangid/candi/codebase/factory/dependency"
 )
@@ -16,7 +16,7 @@ import (
 type MethodUsecase interface {
 	GetAllMethod(ctx context.Context, filter *domain.FilterMethod) (data domain.ResponseMethodList, err error)
 	GetDetailMethod(ctx context.Context, id int) (data domain.ResponseMethod, err error)
-	CreateMethod(ctx context.Context, data *domain.RequestMethod) (res domain.ResponseMethod, err error) 
+	CreateMethod(ctx context.Context, data *domain.RequestMethod) (res domain.ResponseMethod, err error)
 	UpdateMethod(ctx context.Context, data *domain.RequestMethod) (err error)
 	DeleteMethod(ctx context.Context, id int) (err error)
 }
@@ -32,9 +32,9 @@ type methodUsecaseImpl struct {
 func NewMethodUsecase(deps dependency.Dependency) (MethodUsecase, func(sharedUsecase common.Usecase)) {
 	uc := &methodUsecaseImpl{
 		deps:    deps,
-		repoSQL:   repository.GetSharedRepoSQL(),
+		repoSQL: repository.GetSharedRepoSQL(),
 		// repoMongo: repository.GetSharedRepoMongo(),
-		
+
 	}
 	return uc, func(sharedUsecase common.Usecase) {
 		uc.sharedUsecase = sharedUsecase

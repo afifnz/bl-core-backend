@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"payment-service/internal/modules/checkout/domain"
-	"payment-service/pkg/shared/usecase"
+	"monorepo/services/payment-service/internal/modules/checkout/domain"
+	"monorepo/services/payment-service/pkg/shared/usecase"
 
 	"github.com/golangid/candi/candihelper"
 	"github.com/golangid/candi/codebase/factory/dependency"

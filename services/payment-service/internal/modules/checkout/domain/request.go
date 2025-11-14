@@ -1,12 +1,12 @@
 package domain
 
 import (
-	shareddomain "payment-service/pkg/shared/domain"
+	shareddomain "monorepo/services/payment-service/pkg/shared/domain"
 )
 
 // RequestCheckout model
 type RequestCheckout struct {
-	ID    int `json:"id"`
+	ID    int    `json:"id"`
 	Field string `json:"field"`
 }
 

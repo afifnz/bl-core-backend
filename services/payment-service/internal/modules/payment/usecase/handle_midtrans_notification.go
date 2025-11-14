@@ -4,8 +4,8 @@ import (
 	"context"
 	"encoding/json"
 	"log"
-	"payment-service/internal/modules/payment/domain"
-	shareddomain "payment-service/pkg/shared/domain"
+	"monorepo/services/payment-service/internal/modules/payment/domain"
+	shareddomain "monorepo/services/payment-service/pkg/shared/domain"
 	"strconv"
 
 	"github.com/golangid/candi/tracer"

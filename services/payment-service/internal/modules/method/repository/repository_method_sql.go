@@ -8,13 +8,13 @@ import (
 
 	"time"
 
-	"payment-service/internal/modules/method/domain"
-	shareddomain "payment-service/pkg/shared/domain"
+	"monorepo/services/payment-service/internal/modules/method/domain"
+	shareddomain "monorepo/services/payment-service/pkg/shared/domain"
 
 	"github.com/golangid/candi/candishared"
 	"github.com/golangid/candi/tracer"
 
-	"payment-service/pkg/shared"
+	"monorepo/services/payment-service/pkg/shared"
 
 	"gorm.io/gorm"
 	"gorm.io/gorm/clause"

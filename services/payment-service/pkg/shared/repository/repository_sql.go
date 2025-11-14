@@ -8,17 +8,17 @@ import (
 	"fmt"
 
 	// @candi:repositoryImport
-	checkoutrepo "payment-service/internal/modules/checkout/repository"
-	paymentrepo "payment-service/internal/modules/payment/repository"
-	bankrepo "payment-service/internal/modules/bank/repository"
-	categoryrepo "payment-service/internal/modules/category/repository"
-	methodrepo "payment-service/internal/modules/method/repository"
-	providerrepo "payment-service/internal/modules/provider/repository"
+	bankrepo "monorepo/services/payment-service/internal/modules/bank/repository"
+	categoryrepo "monorepo/services/payment-service/internal/modules/category/repository"
+	checkoutrepo "monorepo/services/payment-service/internal/modules/checkout/repository"
+	methodrepo "monorepo/services/payment-service/internal/modules/method/repository"
+	paymentrepo "monorepo/services/payment-service/internal/modules/payment/repository"
+	providerrepo "monorepo/services/payment-service/internal/modules/provider/repository"
 
 	"github.com/golangid/candi/candishared"
 	"github.com/golangid/candi/tracer"
 
-	"payment-service/pkg/shared"
+	"monorepo/services/payment-service/pkg/shared"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -44,7 +44,7 @@ type (
 		// register all repository from modules
 		// @candi:repositoryField
 		checkoutRepo checkoutrepo.CheckoutRepository
-		paymentRepo paymentrepo.PaymentRepository
+		paymentRepo  paymentrepo.PaymentRepository
 		providerRepo providerrepo.ProviderRepository
 		methodRepo   methodrepo.MethodRepository
 		categoryRepo categoryrepo.CategoryRepository
@@ -91,7 +91,7 @@ func NewRepositorySQL(readDB, writeDB *gorm.DB) RepoSQL {
 
 		// @candi:repositoryConstructor
 		checkoutRepo: checkoutrepo.NewCheckoutRepoSQL(readDB, writeDB),
-		paymentRepo: paymentrepo.NewPaymentRepoSQL(readDB, writeDB),
+		paymentRepo:  paymentrepo.NewPaymentRepoSQL(readDB, writeDB),
 		providerRepo: providerrepo.NewProviderRepoSQL(readDB, writeDB),
 		methodRepo:   methodrepo.NewMethodRepoSQL(readDB, writeDB),
 		categoryRepo: categoryrepo.NewCategoryRepoSQL(readDB, writeDB),

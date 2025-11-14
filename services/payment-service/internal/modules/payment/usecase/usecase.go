@@ -4,10 +4,10 @@ package usecase
 
 import (
 	"context"
-	"payment-service/internal/modules/payment/domain"
-	"payment-service/pkg/shared/repository"
-	"payment-service/pkg/shared/service"
-	"payment-service/pkg/shared/usecase/common"
+	"monorepo/services/payment-service/internal/modules/payment/domain"
+	"monorepo/services/payment-service/pkg/shared/repository"
+	"monorepo/services/payment-service/pkg/shared/service"
+	"monorepo/services/payment-service/pkg/shared/usecase/common"
 
 	"github.com/golangid/candi/codebase/factory/dependency"
 )

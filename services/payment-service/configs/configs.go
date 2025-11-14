@@ -9,11 +9,11 @@ import (
 	midtranssdk "monorepo/sdk/midtrans"
 	userservicesdk "monorepo/sdk/user-service"
 
-	"payment-service/api"
-	"payment-service/pkg/shared"
-	"payment-service/pkg/shared/repository"
-	sharedservice "payment-service/pkg/shared/service"
-	"payment-service/pkg/shared/usecase"
+	"monorepo/services/payment-service/api"
+	"monorepo/services/payment-service/pkg/shared"
+	"monorepo/services/payment-service/pkg/shared/repository"
+	sharedservice "monorepo/services/payment-service/pkg/shared/service"
+	"monorepo/services/payment-service/pkg/shared/usecase"
 
 	"github.com/golangid/candi/broker"
 	"github.com/golangid/candi/candihelper"

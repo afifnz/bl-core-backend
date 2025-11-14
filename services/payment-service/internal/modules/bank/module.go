@@ -5,9 +5,9 @@ package bank
 import (
 	// "payment-service/internal/modules/bank/delivery/graphqlhandler"
 	// "payment-service/internal/modules/bank/delivery/grpchandler"
-	"payment-service/internal/modules/bank/delivery/resthandler"
+	"monorepo/services/payment-service/internal/modules/bank/delivery/resthandler"
 	// "payment-service/internal/modules/bank/delivery/workerhandler"
-	"payment-service/pkg/shared/usecase"
+	"monorepo/services/payment-service/pkg/shared/usecase"
 
 	"github.com/golangid/candi/codebase/factory/dependency"
 	"github.com/golangid/candi/codebase/factory/types"
@@ -45,7 +45,7 @@ func NewModule(deps dependency.Dependency) *Module {
 	}
 
 	mod.serverHandlers = map[types.Server]interfaces.ServerHandler{
-		// 
+		//
 	}
 
 	return &mod

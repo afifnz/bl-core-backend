@@ -3,7 +3,7 @@
 package configs
 
 import (
-	"payment-service/api"
+	"monorepo/services/payment-service/api"
 
 	"github.com/golangid/candi/candihelper"
 	graphqlserver "github.com/golangid/candi/codebase/app/graphql_server"

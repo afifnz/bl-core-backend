@@ -8,8 +8,8 @@ import (
 	"log"
 	"net/http"
 
-	"payment-service/internal/modules/payment/domain"
-	"payment-service/pkg/shared/usecase"
+	"monorepo/services/payment-service/internal/modules/payment/domain"
+	"monorepo/services/payment-service/pkg/shared/usecase"
 
 	"github.com/golangid/candi/candihelper"
 	"github.com/golangid/candi/codebase/factory/dependency"

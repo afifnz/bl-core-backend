@@ -1,7 +1,7 @@
 package domain
 
 import (
-	shareddomain "payment-service/pkg/shared/domain"
+	shareddomain "monorepo/services/payment-service/pkg/shared/domain"
 )
 
 // RequestMethod model
